@@ -69,3 +69,33 @@ body{
     font-weight: 400;
     margin-top: -10px;
 }
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img{
+    width: 40px;
+    margin-right: 10px;
+}
+
+.wind{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.wind img{
+    width: 40px;
+    margin-right: 10px;
+}
