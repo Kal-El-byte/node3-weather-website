@@ -1,6 +1,7 @@
 const express = require('express');
 
-
+console.log(__dirname);
+console.log(__filename)
 // store  express 
 const app = express();
 
