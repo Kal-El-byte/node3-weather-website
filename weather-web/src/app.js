@@ -1,7 +1,7 @@
 const express = require('express');
 
 
-// setup express 
+// store  express 
 const app = express();
 
 app.get('', (req, res) => {
