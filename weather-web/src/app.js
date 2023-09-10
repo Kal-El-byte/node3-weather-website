@@ -23,7 +23,7 @@ app.use(express.static(publicDirectoryPath));
 app.get('', (req, res) => {
     res.render('index', {
         pagetitle: 'Home',
-        title: 'Home page',
+        title: 'Weather',
         name: 'Kamelot'
     });
 });
@@ -51,14 +51,14 @@ app.get('/weather', (req, res) => {
     });
 });
 
-app.get('/help/*', (req, res) => {
-    res.render(('404'), {
-        pagetitle: '404',
-        title: '404',
-        name: 'Kamelot',
-        errorText: 'Help article not found'
-    });
-});
+// app.get('/help/*', (req, res) => {
+//     res.render(('404'), {
+//         pagetitle: '404',
+//         title: '404',
+//         name: 'Kamelot',
+//         errorText: 'Help article not found'
+//     });
+// });
 
 app.get('*', (req, res) => {
     res.render(('404'), {
