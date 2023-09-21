@@ -21,5 +21,5 @@ if(!address){
   console.log(location);
   console.log(forecastData);
 });
-}); 
+});
 };
