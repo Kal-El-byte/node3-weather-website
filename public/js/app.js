@@ -6,7 +6,7 @@ const messageTwo = document.querySelector('#msg2');
 
 
 
-messageOne.textContent = 'From Javascriot';
+// messageOne.textContent = 'From Javascriot';
 
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault();
