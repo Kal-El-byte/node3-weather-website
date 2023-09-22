@@ -15,7 +15,7 @@ const request = require('request');
 // });
 
 const forecast = ((latitude, longitude, callback)=>{
-    const url = 'http://api.weatherstack.com/current?access_key=9863ad178291d21b0085414c8bc0fec7&query= ' +encodeURIComponent(latitude) + ', ' + encodeURIComponent(longitude) + '&units=f';
+    const url = 'http://api.weatherstack.com/current?access_key=9863ad178291d21b0085414c8bc0fec7&query= ' +encodeURIComponent(latitude) + ', ' + encodeURIComponent(longitude) + '&units=m';
 
     request( { url, json:true }, (error, {body}={})=>{
         if(error){
@@ -23,7 +23,7 @@ const forecast = ((latitude, longitude, callback)=>{
         }else if(body.error){
             callback('This given location is invalid', undefined)
         }else{
-            callback(undefined,body.current.weather_descriptions+ ' through out the day, it is currently ' + body.current.temperature + ' degrees out.' + ' There is ' + body.current.precip + '% chance of rain.')
+            callback(undefined,body.current.weather_descriptions+ ' through out the day, it is currently ' + body.current.temperature + '°c' + ' There is ' + body.current.precip + '% chance of rain.')
         };
     });
 });
